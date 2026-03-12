@@ -11,7 +11,12 @@ export function CheckAnswer({
         <div>
             <h3>Check Answer</h3>
 
-            <input onChange={e => { setAnswer(e.target.value) }} value={answer} />
+            <input
+                onChange={(e) => {
+                    setAnswer(e.target.value);
+                }}
+                value={answer}
+            />
             {answer === expectedAnswer ? "✔️" : "❌"}
         </div>
     );

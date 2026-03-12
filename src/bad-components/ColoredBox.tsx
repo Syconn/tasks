@@ -4,11 +4,15 @@ import { Button } from "react-bootstrap";
 export const COLORS = ["red", "blue", "green"];
 const DEFAULT_COLOR_INDEX = 0;
 
-function ChangeColor({ setIndex }: { setIndex: Dispatch<SetStateAction<number>> }): React.JSX.Element {
+function ChangeColor({
+    setIndex,
+}: {
+    setIndex: Dispatch<SetStateAction<number>>;
+}): React.JSX.Element {
     return (
         <Button
             onClick={() => {
-                setIndex(prev => (1 + prev) % COLORS.length);
+                setIndex((prev) => (1 + prev) % COLORS.length);
             }}
         >
             Next Color
@@ -16,7 +20,11 @@ function ChangeColor({ setIndex }: { setIndex: Dispatch<SetStateAction<number>> 
     );
 }
 
-function ColorPreview({ colorIndex }: { colorIndex: number }): React.JSX.Element {
+function ColorPreview({
+    colorIndex,
+}: {
+    colorIndex: number;
+}): React.JSX.Element {
     return (
         <div
             data-testid="colored-box"

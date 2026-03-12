@@ -1,7 +1,13 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
-function ShoveBoxButton({ position, setPosition, }: { position: number; setPosition: (newPosition: number) => void; }) {
+function ShoveBoxButton({
+    position,
+    setPosition,
+}: {
+    position: number;
+    setPosition: (newPosition: number) => void;
+}) {
     return (
         <Button
             onClick={() => {

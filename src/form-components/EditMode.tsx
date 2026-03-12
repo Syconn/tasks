@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
 export function EditMode(): React.JSX.Element {
-    const [editMode, setEditMode] = useState<boolean>(false)
+    const [editMode, setEditMode] = useState<boolean>(false);
     const [name, setName] = useState("Your Name");
     const [isStudent, setIsStudent] = useState(true);
 
@@ -12,7 +12,9 @@ export function EditMode(): React.JSX.Element {
                 type="switch"
                 label="Edit Mode"
                 checked={editMode}
-                onChange={() => { setEditMode(!editMode) }}
+                onChange={() => {
+                    setEditMode(!editMode);
+                }}
             />
 
             {!editMode && (
@@ -28,7 +30,9 @@ export function EditMode(): React.JSX.Element {
                         <input
                             type="text"
                             value={name}
-                            onChange={(e) => { setName(e.target.value) }}
+                            onChange={(e) => {
+                                setName(e.target.value);
+                            }}
                         />
                     </label>
 
@@ -37,12 +41,13 @@ export function EditMode(): React.JSX.Element {
                         <input
                             type="checkbox"
                             checked={isStudent}
-                            onChange={(e) => { setIsStudent(e.target.checked) }}
+                            onChange={(e) => {
+                                setIsStudent(e.target.checked);
+                            }}
                         />
                     </label>
                 </div>
             )}
-
         </div>
     );
 }

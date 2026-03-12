@@ -1,9 +1,9 @@
 import {
     add3,
-    fahrenheitToCelius,
-    shout,
-    isQuestion,
     convertYesNo,
+    fahrenheitToCelius,
+    isQuestion,
+    shout,
 } from "./functions";
 
 describe("Testing the basic functions", () => {

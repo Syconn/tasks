@@ -4,7 +4,16 @@ import { Form } from "react-bootstrap";
 export function ChangeColor(): React.JSX.Element {
     const [color, setColor] = useState<string>("red");
 
-    const colors = ["red", "orange", "green", "blue", "yellow", "purple", "pink", "black"]
+    const colors = [
+        "red",
+        "orange",
+        "green",
+        "blue",
+        "yellow",
+        "purple",
+        "pink",
+        "black",
+    ];
 
     return (
         <div>
@@ -15,7 +24,9 @@ export function ChangeColor(): React.JSX.Element {
                         inline={true}
                         key={thisColor}
                         type="radio"
-                        onChange={() => { setColor(thisColor) }}
+                        onChange={() => {
+                            setColor(thisColor);
+                        }}
                         id="emotion-check-happy"
                         label={thisColor}
                         value={color}
@@ -26,7 +37,13 @@ export function ChangeColor(): React.JSX.Element {
             </div>
             <span>
                 You have chosen
-                <span data-testid="colored-box" style={{ backgroundColor: color }}> {color}</span>
+                <span
+                    data-testid="colored-box"
+                    style={{ backgroundColor: color }}
+                >
+                    {" "}
+                    {color}
+                </span>
             </span>
         </div>
     );

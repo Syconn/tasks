@@ -5,9 +5,9 @@ export function GiveAttempts(): React.JSX.Element {
     const [requestedAttempts, setRequestedAttempts] = useState<string>("0");
 
     const adder = () => {
-        const num = parseInt(requestedAttempts)
-        if (num) setAttemptsLeft(attemptsLeft + num)
-    }
+        const num = parseInt(requestedAttempts);
+        if (num) setAttemptsLeft(attemptsLeft + num);
+    };
 
     return (
         <div>
@@ -17,12 +17,18 @@ export function GiveAttempts(): React.JSX.Element {
             <input
                 type={"number"}
                 value={requestedAttempts}
-                onChange={e => { setRequestedAttempts(e.target.value) }}
+                onChange={(e) => {
+                    setRequestedAttempts(e.target.value);
+                }}
             />
             <button
-                onClick={() => { setAttemptsLeft(attemptsLeft - 1) }}
+                onClick={() => {
+                    setAttemptsLeft(attemptsLeft - 1);
+                }}
                 disabled={attemptsLeft === 0}
-            >Use</button>
+            >
+                Use
+            </button>
             <button onClick={adder}>Gain</button>
         </div>
     );
